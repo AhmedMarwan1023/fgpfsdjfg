@@ -10,8 +10,8 @@ client.on('ready', () => {
   console.log(`i Have  [ " ${client.guilds.size} " ]`);
 });
 
-const developers = id
-const adminprefix = initcmd;
+const developers = 314522365218521099
+const adminprefix = $;
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
@@ -49,4 +49,5 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
 
 
-client.login(settings.token);
+client.login(process.env.BOT_TOKEN);
+
