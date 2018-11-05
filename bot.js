@@ -1,8 +1,8 @@
-const settings = require("./config.json"); 
 const Discord = require('discord.js');
-const initcmd = settings.initcmd;
-const id = settings.id;
 const client = new Discord.Client();
+
+const developers = ["314522365218521099"]
+const adminprefix = "$";
 
 client.on('ready', () => {
   console.log(`Hi ${client.user.tag} , This Code by : Kahrbaa `);
@@ -10,8 +10,8 @@ client.on('ready', () => {
   console.log(`i Have  [ " ${client.guilds.size} " ]`);
 });
 
-const developers = 314522365218521099
-const adminprefix = $;
+const developers = id
+const adminprefix = initcmd;
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
@@ -50,4 +50,3 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
 
 client.login(process.env.BOT_TOKEN);
-
