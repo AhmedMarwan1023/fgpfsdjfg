@@ -10,8 +10,7 @@ client.on('ready', () => {
   console.log(`i Have  [ " ${client.guilds.size} " ]`);
 });
 
-const developers = id
-const adminprefix = initcmd;
+
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
